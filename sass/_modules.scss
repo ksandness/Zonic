@@ -237,9 +237,45 @@
                 bottom: 0;
                 left: 0;
                 color: #fff;
-                background: $action-color;
+                background: #33c5f3;
                 @include font-size(1.375);
                 display: none;
+            }
+
+            &#product-link-bdc-angel {
+                .expand {
+                    background: #33c5f3;
+                }
+            }
+
+            &#product-link-recall-angel {
+                .expand {
+                    background: #da491c;
+                }
+            }
+
+            &#product-link-energy-booster {
+                .expand {
+                    background: #c9ca2c;
+                }
+            }
+
+            &#product-link-cruise-control {
+                .expand {
+                    background: #f8981d;
+                }
+            }
+
+            &#product-link-monthly-express {
+                .expand {
+                    background: #9048d4;
+                }
+            }
+
+            &#product-link-declined-angel {
+                .expand {
+                    background: #2f66f1;
+                }
             }
 
         }
