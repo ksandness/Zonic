@@ -20,61 +20,45 @@ $(document).ready(function() {
 
 
       /*PRODUCT MODALS*/
+      var mfp = $.magnificPopup.instance;
+      $('body').on('click', '.mfp-content .modal-controls .icon-close', function(e) {
+          mfp.close();
+          e.preventDefault();
+      });
+      $('body').on('click', '.mfp-content .modal-controls .icon-next', function(e) {
+          mfp.next();
+          e.preventDefault();
+      });
+
+      $('body').on('click', '.mfp-content .modal-controls .icon-prev', function(e) {
+          mfp.prev();
+          e.preventDefault();
+      });
+
       $('.product-link').magnificPopup({
-          type: 'inline',
+          type: 'ajax',
           gallery:{
-            enabled:true
+            enabled:true,
+            preload: [1,2]
           },
           callbacks: {
-              open: function() {
-                    var mfp = $.magnificPopup.instance;
-                    var proto = $.magnificPopup.proto;
-
-                    // extend function that moves to next item
-                    mfp.next = function() {
-                        proto.next.call(mfp);
-                    };
-
-                    // same with prev method
-                    mfp.prev = function() {
-                        proto.prev.call(mfp);
-                    };
-
-                    $('body').on('click', '.mfp-content .modal-controls .icon-close', function(e) {
-                        mfp.close();
-                        e.preventDefault();
-                    });
-
-                    $('body').on('click', '.mfp-content .modal-controls .icon-next', function(e) {
-                        mfp.next();
-                        e.preventDefault();
-                    });
-
-                    $('body').on('click', '.mfp-content .modal-controls .icon-prev', function(e) {
-                        mfp.prev();
-                        e.preventDefault();
-                    });
-
-              },
               change: function() {
                   setTimeout(function(){
-                      /*Modal Screen Slider*/
-                      $('.modal-slider').flexslider({
+                      $('.mfp-content .modal-slider').flexslider({
                           controlNav: true,
                           directionNav: false,
                       });
 
-                      $(".modal-slider-controllers .prev").on("click", function(e) {
+                      $(".mfp-content .modal-slider-controllers .prev").on("click", function(e) {
                           $(this).parents('.modal-slider').flexslider("prev");
                           e.preventDefault();
                       });
 
-                      $(".modal-slider-controllers .next").on("click", function(e) {
+                      $(".mfp-content .modal-slider-controllers .next").on("click", function(e) {
                           $(this).parents('.modal-slider').flexslider("next");
                           e.preventDefault();
                       });
 
-                      /*Modal Testimonial Slider*/
                       $('.mfp-content .common-modal .testimonial-slider').flexslider({
                           controlNav: false,
                           directionNav: false,
@@ -92,7 +76,7 @@ $(document).ready(function() {
                           e.preventDefault();
                       });
 
-                  }, 1000);
+                  }, 1500);
 
               },
           }
