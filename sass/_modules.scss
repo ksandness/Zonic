@@ -175,6 +175,8 @@
         @include flex-wrap(wrap);
         @include font-size(.813);
         text-align: center;
+        border-right: 1px solid #bdb0b0;
+        border-bottom: 1px solid #bdb0b0;
 
         .product-link {
             border-left: 1px solid #bdb0b0;
