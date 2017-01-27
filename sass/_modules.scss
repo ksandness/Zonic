@@ -38,6 +38,11 @@
         margin: 0 0 5px 0;
     }
 
+    .prehead {
+        @include font-size(1.5);
+        text-transform: uppercase;
+    }
+
     .divider {
         height: 2px;
         color: $base-background-color;
