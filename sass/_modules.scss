@@ -59,26 +59,29 @@
 
 /*SOLUTION*/
 #solution {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    .global-container {
+      padding-top: 60px;
+      padding-bottom: 60px;
 
-    @include mq($bk-md) {
-        background: url("../images/graphic-process.png") no-repeat right center;
-        background-size: 800px;
-        padding-top: 110px;
-        padding-bottom: 110px;
+      @include mq($bk-md) {
+          padding-top: 110px;
+          padding-bottom: 110px;
+          background: url("../images/graphic-process.png") no-repeat calc(100% - 25px) center;
+          /*background-size: 800px;*/
+          background-size: auto 100%;
+      }
+
+      @include mq($bk-lg) {
+          /*background-size: 1000px;*/
+          /*background: url("../images/graphic-process.png") no-repeat calc(100% - 24px) center;*/
+      }
+
+      @include mq($bk-xl) {
+          /*background-size: cover;*/
+          /*background: url("../images/graphic-process.png") no-repeat calc(100% - 24px) center;*/
+      }
+
     }
-
-    @include mq($bk-lg) {
-        background-size: 1000px;
-        background: url("../images/graphic-process.png") no-repeat calc(100% - 24px) center;
-    }
-
-    @include mq($bk-xl) {
-        background-size: cover;
-        background: url("../images/graphic-process.png") no-repeat calc(100% - 24px) center;
-    }
-
     .intro {
         @include font-size(1);
         color: #000;
