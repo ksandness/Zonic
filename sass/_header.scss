@@ -21,10 +21,26 @@
     }
 }
 
+.icon-menu {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    z-index: 1;
+    color: #fff;
+    @include font-size(1.6);
+    cursor: pointer;
+
+    @include mq($bk-md) {
+        display: none;
+    }
+}
+
 #primary-nav {
+    display: none;
 
     @include mq($bk-md) {
         float: right;
+        display: block;
     }
 
     ul {

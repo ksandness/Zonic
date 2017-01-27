@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'zonic-fontello';
-  src: url('../font/zonic-fontello.eot?22721227');
-  src: url('../font/zonic-fontello.eot?22721227#iefix') format('embedded-opentype'),
-       url('../font/zonic-fontello.woff2?22721227') format('woff2'),
-       url('../font/zonic-fontello.woff?22721227') format('woff'),
-       url('../font/zonic-fontello.ttf?22721227') format('truetype'),
-       url('../font/zonic-fontello.svg?22721227#zonic-fontello') format('svg');
+  src: url('../font/zonic-fontello.eot?23738182');
+  src: url('../font/zonic-fontello.eot?23738182#iefix') format('embedded-opentype'),
+       url('../font/zonic-fontello.woff2?23738182') format('woff2'),
+       url('../font/zonic-fontello.woff?23738182') format('woff'),
+       url('../font/zonic-fontello.ttf?23738182') format('truetype'),
+       url('../font/zonic-fontello.svg?23738182#zonic-fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'zonic-fontello';
-    src: url('../font/zonic-fontello.svg?22721227#zonic-fontello') format('svg');
+    src: url('../font/zonic-fontello.svg?23738182#zonic-fontello') format('svg');
   }
 }
 */
@@ -70,6 +70,7 @@
 .icon-left-open:before { content: '\e80c'; } /* '' */
 .icon-right-open:before { content: '\e80d'; } /* '' */
 .icon-cog-alt:before { content: '\e80e'; } /* '' */
+.icon-menu:before { content: '\f0c9'; } /* '' */
 .icon-mail-alt:before { content: '\f0e0'; } /* '' */
 .icon-angle-left:before { content: '\f104'; } /* '' */
 .icon-angle-right:before { content: '\f105'; } /* '' */

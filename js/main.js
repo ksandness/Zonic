@@ -3,6 +3,35 @@ $(document).ready(function() {
       var currentYear = new Date().getFullYear();
       $(".copy .year").html(currentYear);
 
+      /*MAIN NAVIGATION*/
+      $("body").on("click", ".icon-menu", function() {
+          //$("#navigation-menu ul.sf-menu > li").show();
+          dropDown = $("#primary-nav");
+          if ($(dropDown).is(":visible")) {
+              $(dropDown).slideUp(300);
+              $(dropDown).removeClass("visible");
+          } else {
+              $(dropDown).slideDown(300);
+              $(dropDown).addClass("visible");
+          }
+          return false;
+      });
+
+      $(window).resize(function() {
+          if (matchMedia('only screen and (max-width: 767px)').matches) {
+              if (!($("body").hasClass("mobile"))) {
+                  $("body").removeClass("desktop").addClass("mobile");
+                  $("#primary-nav").hide();
+              }
+          }
+          if (matchMedia('only screen and (min-width: 768px)').matches) {
+              if (!($("body").hasClass("desktop"))) {
+                  $("body").removeClass("mobile").addClass("desktop");
+                  $("#primary-nav").show();
+              }
+          }
+      });
+
       /*Testimnoials Slider*/
       $('#main-content .testimonial-group .testimonial-slider').flexslider({
           controlNav: false,
