@@ -1,0 +1,112 @@
+#main-footer {
+    background: #393939;
+    color: #999;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    a {
+        color: #fff;
+
+        &.invert {
+            color: $action-color;
+        }
+    }
+
+    #footer-nav {
+        @include clearfix;
+        margin: 0 0 15px 0;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+            font-weight: 600;
+
+            li {
+                margin: 0 20px 0 0;
+                float: left;
+
+                &:before {
+                    content:"";
+                }
+            }
+        }
+    }
+
+    .col-left {
+        @include mq($bk-md) {
+            float: left;
+            width: 66%;
+        }
+    }
+
+    .col-right {
+        @include mq($bk-md) {
+            float: left;
+            width: 34%;
+            padding-left: 10%;
+        }
+    }
+
+    #frm-demo {
+        margin: 0 0 40px 0;
+
+        p {
+            margin: 0;
+            @include font-size(1);
+        }
+
+        input[type="email"],
+        input[type="text"],
+        textarea {
+            color: #999;
+        }
+
+        ::-webkit-input-placeholder {
+           color: #4c4b4b;
+        }
+
+        :-moz-placeholder { /* Firefox 18- */
+           color: #4c4b4b;
+        }
+
+        ::-moz-placeholder {  /* Firefox 19+ */
+           color: #4c4b4b;
+        }
+
+        :-ms-input-placeholder {
+           color: #4c4b4b;
+        }
+    }
+
+    input[type="email"] {
+        font-weight: 300;
+        @include font-size(2.5);
+        background: none;
+        padding: 0;
+        border: none;
+        border-bottom: 1px solid #999;
+
+        @include mq($bk-md) {
+            @include font-size(3.75);
+        }
+    }
+
+    .copy {
+        color: #4c4b4b;
+        color: #717171;
+    }
+
+    .social-networks {
+        @include font-size(1.5);
+        margin-top: -10px;
+
+        .icon {
+            &:before {
+                margin-left: 1px;
+                margin-right: 1px;
+            }
+        }
+    }
+}

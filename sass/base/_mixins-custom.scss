@@ -1,0 +1,260 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+//Create Columns
+@mixin create-columns($columns, $gutter) {
+    width: percentage((100/$columns - $gutter/$columns) * .01);
+		margin-right: percentage($gutter * .01);
+		margin-bottom: percentage($gutter * .01);
+    float: left;
+}
+
+//Full width element
+@mixin full-width {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+// Breakpoint
+@mixin mq($break) {
+    @media #{$break} {
+        @content;
+    }
+}
+
+// MODAL STYLES
+@mixin modal-styles($featuredColor) {
+		max-width: 1050px;
+		background: #fff;
+		margin: 0 auto;
+
+		.modal-section {
+				padding: 30px 15px;
+				@include clearfix;
+
+				@include mq($bk-sm) {
+		        padding: 30px;
+		    }
+
+		    @include mq($bk-md) {
+		        padding: 45px;
+		    }
+
+		    @include mq($bk-lg) {
+		        padding: 60px
+		    }
+		}
+
+		h2 {
+				font-weight: 400;
+				@include font-size(2.25);
+				margin-bottom: .5em;
+		}
+
+		h3 {
+				font-weight: 600;
+				@include font-size(1.625);
+				text-transform: uppercase;
+		}
+
+		.modal-header {
+				background: $featuredColor;
+				color: #fff;
+				@include font-size(1.125);
+				text-align: center;
+				padding: 45px 5%;
+				position: relative;
+
+				@include mq($bk-md) {
+						padding: 45px 23%;
+				}
+
+				p {
+						margin-bottom: 10px;
+				}
+
+				.modal-controls {
+						position: absolute;
+						top: 0;
+						right: 0;
+
+						a {
+								width: 45px;
+								height: 45px;
+								display: block;
+								color: #fff;
+								text-indent: -999em;
+								cursor: pointer;
+								border-left: 1px solid #adcbd4;
+								border-bottom: 1px solid #adcbd4;
+
+								@include mq($bk-sm) {
+										width: 55px;
+										height: 55px;
+						    }
+
+						    @include mq($bk-md) {
+										width: 75px;
+										height: 75px;
+						    }
+
+								&.icon-close {
+										background: rgba(0, 0, 0, 0.8) url("../images/icon-close.png") no-repeat center center;
+
+										&:hover {
+												background-color: rgba(0, 0, 0, 1);
+										}
+								}
+
+								&.icon-next {
+										background: rgba(255, 255, 255, 0.8) url("../images/icon-next.png") no-repeat center center;
+
+										&:hover {
+												background-color: rgba(255, 255, 255, 1);
+										}
+								}
+
+								&.icon-prev {
+										background: rgba(255, 255, 255, 0.8) url("../images/icon-prev.png") no-repeat center center;
+
+										&:hover {
+												background-color: rgba(255, 255, 255, 1);
+										}
+								}
+						}
+				}
+		}
+
+		.modal-content {
+				.section-header {
+						font-weight: 700;
+				}
+		}
+
+		.modal-chart {
+				.common-button {
+						margin-bottom: 40px;
+
+						@include mq($bk-md) {
+				        float: right;
+								margin-top: 40px;
+								margin-left: 35px;
+				    }
+				}
+		}
+
+		.modal-slider {
+				position: relative;
+				text-align: center;
+				padding: 0 40px;
+
+				.slides {
+						@include clearfix;
+						/*display: inline-block;*/
+
+						li {
+								&:before {
+										content: "";
+										display: none;
+								}
+						}
+				}
+
+				.flex-control-nav {
+						display: block;
+						position: static;
+
+						a {
+								background: #cecece;
+
+								&.flex-active {
+										background: $featuredColor;
+								}
+						}
+				}
+		}
+
+		.modal-slider-controllers {
+				.prev, .next {
+						position: absolute;
+						top: 50%;
+						@include font-size(5);
+						line-height: 1;
+						transform: translate(0, -75%);
+						z-index: 1000;
+						color: $featuredColor;
+
+						.icon {
+								&:before {
+										width: auto;
+										margin: 0;
+								}
+						}
+				}
+
+				.prev {
+						left: 0;
+				}
+
+				.next {
+						right: 0;
+				}
+		}
+
+		.testimonials {
+		    padding-top: 75px;
+		    padding-bottom: 75px;
+				border-bottom: 27px solid $featuredColor;
+
+		    @include mq($bk-md) {
+		        padding-top: 175px;
+		        padding-bottom: 175px;
+		    }
+
+				.flexslider-controllers a {
+            &:hover {
+                background: $featuredColor;
+            }
+        }
+		}
+
+		.modal-ready {
+				background: $featuredColor;
+				text-align: center;
+				padding-top: 90px;
+				padding-bottom: 90px;
+
+				.section-header {
+						color: #fff;
+						@include font-size(2.75);
+
+						@include mq($bk-md) {
+								@include font-size(3.75);
+						}
+				}
+		}
+
+		ul {
+				&.lg-bullets {
+						li {
+								&:before {
+										color: $featuredColor;
+								}
+						}
+				}
+		}
+
+}

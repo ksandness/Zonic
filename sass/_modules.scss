@@ -1,0 +1,739 @@
+/*HERO*/
+#hero {
+    text-align: center;
+    padding: 75px 0 25px 0;
+    background: url("../images/hero.jpg") no-repeat center center;
+    background-size: cover;
+    @include font-size(1);
+    color: #fff;
+
+    @include mq($bk-sm) {
+        padding: 125px 0 55px 0;
+    }
+
+    @include mq($bk-md) {
+        padding: 175px 0 85px 0;
+    }
+
+
+    .section-header {
+        color: #fff;
+        @include font-size(2);
+        line-height: 1;
+        margin: 0 0 .7em 0;
+
+        @include mq($bk-sm) {
+            @include font-size(2.75);
+        }
+
+        @include mq($bk-md) {
+            @include font-size(3.75);
+        }
+    }
+
+    .section-sub {
+        @include font-size(1.5);
+        color: #fff;
+        text-transform: none;
+        margin: 0 0 5px 0;
+    }
+
+    .divider {
+        height: 2px;
+        color: $base-background-color;
+        background: $base-background-color;
+        width: 145px;
+        @include center-block;
+        margin-bottom: 2.5em;
+    }
+
+    p {
+        margin-bottom: 1em;
+    }
+}
+
+/*SOLUTION*/
+#solution {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include mq($bk-md) {
+        background: url("../images/graphic-process.png") no-repeat right center;
+        background-size: 800px;
+        padding-top: 110px;
+        padding-bottom: 110px;
+    }
+
+    @include mq($bk-lg) {
+        background-size: 1000px;
+        background: url("../images/graphic-process.png") no-repeat calc(100% - 24px) center;
+    }
+
+    @include mq($bk-xl) {
+        background-size: cover;
+        background: url("../images/graphic-process.png") no-repeat calc(100% - 24px) center;
+    }
+
+    .intro {
+        @include font-size(1);
+        color: #000;
+    }
+
+    header {
+        padding-right: 0;
+
+        @include mq($bk-md) {
+            padding-right: 0;
+        }
+
+        @include mq($bk-lg) {
+            padding-right: 150px;
+        }
+
+        @include mq($bk-xl) {
+            padding-right: 580px;
+        }
+    }
+
+    .section-content {
+        padding-right: 0;
+
+        @include mq($bk-md) {
+            padding-right: 350px;
+        }
+
+        @include mq($bk-lg) {
+            padding-right: 500px;
+        }
+
+        @include mq($bk-xl) {
+            padding-right: 700px;
+        }
+    }
+
+    .section-header {
+        @include font-size(2.625);
+        line-height: 1.1;
+        margin: 0 0 .7em 0;
+    }
+
+    .section-graphic {
+        @include mq($bk-md) {
+            display: none;
+        }
+    }
+
+    .divider {
+        background: #000;
+        height: 2px;
+        color: #000;
+        width: 145px;
+        margin-bottom: 3em;
+    }
+
+    p {
+        margin-bottom: 2.5em;
+    }
+
+}
+
+/*TOTAL REACH*/
+#total-reach {
+
+    .global-container {
+
+        @include mq($bk-lg) {
+          @include display(flex);
+        }
+    }
+
+    .product-main,
+    .product-sub {
+        width: 100%;
+
+        @include mq($bk-lg) {
+            width: 50%;
+        }
+    }
+
+    .product-main {
+        padding: 50px 50px 50px 0;
+        border-top: 1px solid #bdb0b0;
+
+        .inline-car {
+            margin-right: -50px;
+        }
+    }
+
+    .product-sub {
+        @include display(flex);
+        @include flex-wrap(wrap);
+        @include font-size(.813);
+        text-align: center;
+
+        .product-link {
+            border-left: 1px solid #bdb0b0;
+            border-top: 1px solid #bdb0b0;
+            border-right: 1px solid #bdb0b0;
+            width: 100%;
+            position: relative;
+            @include display(flex);
+            @include align-items(center);
+            text-align: center;
+            padding: 2.5%;
+            min-height: 195px;
+
+            @include mq($bk-sm) {
+                width: 50%;
+            }
+
+            @include mq($bk-lg) {
+              border-right: none;
+            }
+
+            &:hover {
+                background: #393939;
+                color: #fff;
+                @include align-items(flex-top);
+
+                .product-desc {
+                    display: block;
+                }
+
+                .product-header {
+                    .logo {
+                        &.standard {
+                            display: none;
+                        }
+
+                        &.invert {
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                .expand {
+                    display: block;
+                }
+            }
+
+            section {
+                width: 100%;
+            }
+
+            .expand {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                color: #fff;
+                background: $action-color;
+                @include font-size(1.375);
+                display: none;
+            }
+
+        }
+
+        .product-desc {
+            color: #999;
+            line-height: 1.7;
+            display: none;
+            margin: 0;
+        }
+
+        .product-header {
+            margin: 0;
+
+            .logo {
+                margin: 0;
+                display: inline-block;
+
+                &.invert {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*TESTIMONIALS*/
+.testimonials {
+    border-bottom: 27px solid #cacc2c;
+    background: url("../images/background-testimonials.jpg") no-repeat center center;
+    //background-attachment: fixed;
+    background-size: cover;
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+    @include mq($bk-md) {
+        padding-top: 175px;
+        padding-bottom: 175px;
+    }
+
+    .section-header {
+        display: none;
+    }
+
+    .testimonial-group {
+        blockquote {
+            color: #fff;
+            @include font-size(1.25);
+            text-align: center;
+            margin: 0;
+
+            @include mq($bk-md) {
+                @include font-size(1.563);
+            }
+
+            p {
+                margin: 0;
+            }
+
+            footer {
+                @include font-size(1.125);
+            }
+        }
+    }
+
+    .testimonial-slider {
+        border: none;
+        background: none;
+        margin: 0 0 35px 0;
+
+            ul {
+                li {
+                    &:before {
+                        content: "";
+                    }
+                }
+            }
+
+    }
+
+    .flexslider-controllers {
+        text-align: center;
+
+        a {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            color: #fff;
+            background: #afafad;
+
+            &:hover {
+                background: #cacc2c;
+            }
+        }
+
+        .icon {
+            display: block;
+            margin-top: -3px;
+        }
+    }
+}
+
+
+/*PATH*/
+#path {
+    padding-top: 60px;
+    padding-bottom: 120px;
+    background: url("../images/graphic-contact.png") no-repeat 34% bottom;
+
+    @include mq($bk-lg) {
+        padding-top: 80px;
+        padding-bottom: 160px;
+    }
+
+    .global-container {
+        position: relative;
+    }
+
+    header {
+        @include mq($bk-md) {
+            padding-right: 300px;
+        }
+    }
+
+    .section-header {
+        margin: 0 0 10px 0;
+    }
+
+    .common-button {
+        margin-bottom: 30px;
+
+        @include mq($bk-md) {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            margin: 0;
+        }
+
+        .icon {
+            &:before {
+                margin: 0 5px 0 0;
+            }
+        }
+    }
+
+    #path-map-mobile {
+        @include mq($bk-md) {
+            display: none;
+        }
+
+        .cell {
+            border-top: 1px solid #818181;
+            padding: 30px 0;
+        }
+
+        .cell-title {
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0 0 5px 0;
+        }
+
+        .cell-content {
+            @include font-size(.813);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .icon {
+            color: #da491c;
+            @include font-size(2.313);
+            border: 1px solid #da491c;
+            border-radius: 50%;
+            width: 67px;
+            height: 67px;
+            display: inline-block;
+            line-height: 67px;
+            text-align: center;
+            background: #fff;
+            z-index: 1;
+            float: left;
+            margin: 0 10px 0 0;
+        }
+    }
+
+    .path-map-row {
+        display: none;
+
+        @include mq($bk-md) {
+            @include display(flex);
+        }
+
+        .cell {
+            width: 25%;
+            padding: 12px 40px 12px 12px;
+            position: relative;
+            border-left: 1px solid #818181;
+        }
+
+        .cell-title {
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0 0 5px 0;
+        }
+
+        .cell-content {
+            @include font-size(.813);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .icon {
+            color: #da491c;
+            @include font-size(2.313);
+            border: 1px solid #da491c;
+            border-radius: 50%;
+            width: 67px;
+            height: 67px;
+            display: inline-block;
+            line-height: 67px;
+            text-align: center;
+            position: absolute;
+            left: -33px;
+            background: #fff;
+            z-index: 1;
+        }
+
+        .dot {
+            border: 1px solid #818181;
+            border-radius: 50%;
+            background: #fff;
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            left: -8px;
+            z-index: 1;
+        }
+
+        &:first-of-type {
+            .cell {
+                border-bottom: 1px dashed #818181;
+            }
+
+            .icon {
+                top: 0;
+            }
+
+            .dot {
+                bottom: -8px;
+            }
+        }
+
+        &:last-of-type {
+            .icon {
+                bottom: 0;
+            }
+
+            .dot {
+                top: -8px;
+            }
+        }
+    }
+}
+
+
+/*MOBILE*/
+#mobile {
+    background: $base-background-color;
+    padding-top: 60px;
+    text-align: center;
+
+    @include mq($bk-lg) {
+        text-align: left;
+    }
+
+    .section-header {
+        @include font-size(1.625);
+    }
+
+    .intro {
+        font-weight: 600;
+        color: #000;
+        @include font-size(2.5);
+        line-height: 1.1;
+        margin-bottom: 1em;
+
+        @include mq($bk-xl) {
+            @include font-size(3.438);
+        }
+
+        .highlight {
+            color: #fff;
+        }
+    }
+
+    .section-content {
+        @include mq($bk-lg) {
+            float: left;
+            width: 57%;
+            padding-right: 91px;
+        }
+    }
+
+    .section-graphic {
+        @include center-block;
+        margin-top: 30px;
+
+        @include mq($bk-lg) {
+            float: left;
+            width: 43%;
+            margin-top: 0;
+        }
+    }
+
+}
+
+
+/*AUDIENCE*/
+#audience {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: url("../images/graphic-smart-marketing.png") no-repeat right top;
+    background-size: 200px;
+
+    @include mq($bk-md) {
+        background-size: auto;
+    }
+
+    .section-header {
+        line-height: 1.1;
+        margin: 0 0 .5em 0;
+    }
+
+    .section-graphic {
+        @include center-block;
+    }
+}
+
+/*DATA*/
+#data {
+    background: $secondary-background-color;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    text-align: center;
+    color: #000;
+
+    .section-header {
+        @include font-size(1.625);
+        font-weight: 700;
+        text-transform: none;
+    }
+
+    .section-content {
+        padding: 0;
+
+        @include mq($bk-sm) {
+            padding: 0 40px;
+        }
+
+        @include mq($bk-md) {
+            padding: 0 80px;
+        }
+
+        @include mq($bk-lg) {
+            padding: 0 150px;
+        }
+
+        @include mq($bk-xl) {
+            padding: 0 270px;
+        }
+    }
+
+    .data-block-wrap {
+        @include mq($bk-md) {
+            @include display(flex);
+            padding: 0 85px;
+        }
+
+        @include mq($bk-xl) {
+            @include display(flex);
+            padding: 0 155px;
+        }
+    }
+
+    .data-block {
+        @include font-size(1.5);
+        line-height: 1.2;
+        margin: 0 0 20px 0;
+
+        @include mq($bk-md) {
+            @include flex-grow(1);
+            margin: 0;
+        }
+
+        .count {
+            color: #fff;
+            font-weight: bold;
+            @include font-size(3.75);
+            display: block;
+            line-height: 1;
+        }
+    }
+
+    .highlight {
+        color: #fff;
+    }
+}
+
+/*CONTACT*/
+#contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: url("../images/graphic-contact.png") no-repeat right bottom;
+
+    @include mq($bk-lg) {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        background: url("../images/graphic-contact.png") no-repeat 45px bottom;
+    }
+
+    #contact-details {
+        @include mq($bk-lg) {
+            float: left;
+            width: 34%;
+            padding: 0 80px 0 0;
+        }
+    }
+
+    #frm-contact {
+
+        @include mq($bk-lg) {
+            float: left;
+            width: 66%;
+        }
+
+        button[type="submit"] {
+            .icon {
+                @include font-size(1);
+
+                &:before {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+
+    .section-header {
+        margin: 0 0 .4em 0;
+    }
+
+    .section-sub {
+        font-weight: 600;
+        @include font-size(.875);
+        text-transform: uppercase;
+        line-height: 1;
+    }
+
+    .address {
+        margin-left: 20px;
+        .icon {
+            margin-left: -22px;
+        }
+    }
+}
+
+
+
+/*TOOLS ALL*/
+.panel {
+    text-align: center;
+    position: relative;
+
+    .common-button {
+        margin: 30px 0 60px 0;
+    }
+}
+
+.fixed-bar {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+    .global-container {
+      position: relative;
+      height: 100px;
+    }
+
+    .icon-close {
+          position: absolute;
+          top: 0;
+          right: 15px;
+
+          @include mq($bk-sm) {
+              right: 30px;
+          }
+
+          @include mq($bk-md) {
+              right: 45px;
+          }
+
+          @include mq($bk-lg) {
+              right: 60px;
+          }
+    }
+
+}

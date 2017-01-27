@@ -1,0 +1,32 @@
+#modal-group {
+    display: none;
+}
+
+.mfp-wrap .mfp-arrow,
+.mfp-wrap .mfp-close {
+    display: none;
+}
+
+#modal-bdc {
+    @include modal-styles(#33c5f3);
+}
+
+#modal-recall {
+    @include modal-styles(#da491c);
+}
+
+#modal-energy-booster {
+    @include modal-styles(#c9ca2c);
+}
+
+#modal-cruise-control {
+    @include modal-styles(#f8981d);
+}
+
+#modal-monthly-express {
+    @include modal-styles(#9048d4);
+}
+
+#modal-declined {
+    @include modal-styles(#2f66f1);
+}

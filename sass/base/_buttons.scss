@@ -1,0 +1,62 @@
+button,
+.common-button {
+  appearance: none;
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid $base-border-color;
+  color: $base-border-color;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  line-height: 1;
+  padding: 15px 40px;
+  margin: 0 10px 0 0;
+  text-decoration: none;
+  transition: background-color $base-duration $base-timing;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-transform: uppercase;
+
+
+  &:hover,
+  &:focus {
+    background-color: $secondary-background-color;
+    color: #fff;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover {
+      background-color: $action-color;
+    }
+  }
+
+  .icon {
+      @include font-size(2.2);
+
+      &:before {
+          width: auto;
+          margin: 0 20px 0 0;
+      }
+
+      &.icon-chat {
+          @include font-size(1.125);
+      }
+  }
+
+  .icon, span {
+      vertical-align: middle;
+  }
+
+  &.button-error {
+      background-color:#e35205;
+
+      &:hover {
+          background-color: shade(#e35205, 20%);
+      }
+  }
+}

@@ -1,0 +1,81 @@
+/*GLOBAL CONTENT CONTAINERS*/
+.global-container {
+    max-width: $max-width;
+    min-width: $min-width;
+    @include center-block();
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: content-box;
+    @include clearfix;
+
+    @include mq($bk-sm) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @include mq($bk-md) {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    @include mq($bk-lg) {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+.home {
+  /*padding-top: 248px;*/
+
+  @include mq($bk-md) {
+      padding-top: 67px;
+  }
+}
+
+/*ANCHOR LINKS*/
+#tools.anchor {
+    @include mq($bk-md) {
+      top: -60px;
+      display: block;
+      position: relative;
+    }
+}
+
+#process.anchor {
+  @include mq($bk-md) {
+    top: -110px;
+    display: block;
+    position: relative;
+  }
+}
+
+#ease-of-use.anchor {
+    @include mq($bk-md) {
+      top: -110px;
+      display: block;
+      position: relative;
+    }
+}
+
+#contact-us.anchor {
+  @include mq($bk-md) {
+    top: -110px;
+    display: block;
+    position: relative;
+  }
+}
+
+/*COLUMNS*/
+.col-wrap {
+    @include clearfix();
+
+    .col-half {
+        margin: 0 0 20px 0;
+
+        @include mq($bk-md) {
+            width: 50%;
+            float: left;
+            margin: 0;
+				}
+    }
+}

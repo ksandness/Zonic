@@ -1,0 +1,58 @@
+#main-header {
+    background: $base-background-color;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+    padding: 14px 0;
+
+    @include mq($bk-md) {
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+    }
+
+    #logo {
+        margin: 0;
+
+        @include mq($bk-md) {
+            float: left;
+        }
+    }
+}
+
+#primary-nav {
+
+    @include mq($bk-md) {
+        float: right;
+    }
+
+    ul {
+        text-transform: uppercase;
+        padding: 4px 0 0 0;
+        margin: 0;
+    }
+
+    li {
+        margin: 0 0 0 18px;
+
+        &:before {
+            content:"";
+        }
+
+        @include mq($bk-md) {
+            float: left;
+        }
+    }
+
+    a {
+        color: #fff;
+
+        &.invert {
+            background: #fff;
+            color: $action-color;
+            border-radius: 3px;
+            padding: 2px 6px;
+        }
+    }
+}

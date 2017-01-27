@@ -1,0 +1,111 @@
+fieldset {
+  background-color: $secondary-background-color;
+  border: 1px solid $form-input-border-color;
+  margin: 0 0 $small-spacing;
+  padding: $base-spacing;
+}
+
+input,
+label,
+select {
+  display: block;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+
+label {
+  font-weight: 400;
+  margin-bottom: .2em;
+
+  &.required::after {
+    content: "*";
+  }
+
+  abbr {
+    display: none;
+  }
+}
+
+#{$all-text-inputs},
+select[multiple=multiple],
+.select-wrap {
+  background-color: #fff;
+  border: 1px solid $form-input-border-color;
+  border-radius: 0;
+  box-shadow: $form-box-shadow;
+  box-sizing: border-box;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  padding: $base-spacing / 2.6;
+  transition: border-color $base-duration $base-timing;
+  width: 100%;
+  color: $base-font-color;
+
+  &:hover {
+    border-color: shade($base-border-color, 20%);
+  }
+
+  &:focus {
+    border-color: $action-color;
+    box-shadow: $form-box-shadow-focus;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: shade($base-background-color, 5%);
+    cursor: not-allowed;
+
+    &:hover {
+      border: $base-border;
+    }
+  }
+}
+
+textarea {
+  resize: vertical;
+  height: 140px;
+}
+
+input[type="search"] {
+  appearance: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: $small-spacing / 2;
+
+  + label {
+    display: inline-block;
+  }
+}
+
+input[type="file"] {
+  margin-bottom: $small-spacing;
+  width: 100%;
+}
+
+select {
+  margin-bottom: $base-spacing;
+  max-width: 100%;
+  width: auto;
+}
+
+.row {
+  @include clearfix;
+
+  .half {
+      @include mq($bk-md) {
+          width: 48%;
+          float: left;
+
+          &:first-child {
+              margin-right: 2%;
+          }
+
+          &:last-child {
+              margin-left: 2%;
+          }
+      }
+  }
+}

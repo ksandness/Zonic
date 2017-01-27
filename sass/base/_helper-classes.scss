@@ -1,0 +1,57 @@
+.content-container {
+    max-width: $max-width;
+    @include center-block;
+    box-sizing: content-box;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.hide-mobile {
+    display: none;
+
+    &.btn-common {
+        display: none;
+    }
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    float: right;
+    margin-left: 15px;
+}
+
+.align-left {
+    float: left;
+    margin-righ: 15px;
+}
+
+.va-middle {
+    vertical-align: middle;
+}
+
+.clear {
+    clear: both;
+}
+
+.columns {
+    @include columns(2 8em);
+    @include column-gap(30px);
+}
+
+
+/*Mobile First Responsive Behavior*/
+@include mq($bk-md) {
+  .hide-mobile {
+      display: block;
+  }
+
+  button,
+  .btn-common {
+      &.hide-mobile {
+          display: inline-block;
+      }
+  }
+}
