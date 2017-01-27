@@ -1,4 +1,7 @@
 $(document).ready(function() {
+      /*GET CURRENT YEAR*/
+      var currentYear = new Date().getFullYear();
+      $(".copy .year").html(currentYear);
 
       /*Testimnoials Slider*/
       $('#main-content .testimonial-group .testimonial-slider').flexslider({
